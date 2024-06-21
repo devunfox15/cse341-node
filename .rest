@@ -10,7 +10,7 @@ GET http://localhost:3000/user
 //**********************GET ONE************************
 //COURSE
 ### Render
-GET https://cse341-node-ujx7.onrender.com/user/http://localhost:8080/user/666cde87de5600aacca96bb1
+GET https://cse341-node-ujx7.onrender.com/user/666cde87de5600aacca96bb1
 ### Local Host
 GET http://localhost:3000/user/http://localhost:8080/user/666cde87de5600aacca96bb1
 
