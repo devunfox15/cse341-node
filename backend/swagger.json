@@ -5,10 +5,10 @@
     "description": "Project 1 part 2 User API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-node-ujx7.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/user/": {

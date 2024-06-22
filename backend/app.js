@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const userRoutes = require('./routes/user');
 
+
 const port = process.env.PORT || 8080;
 const app = express();
 
@@ -19,6 +20,10 @@ res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, DELETE')
 res.setHeader('Access-Control-Allow-Headers', 'origin, x-Requested-With, Content-Type, Accept, z-Key');
 next();
 })
+.use('/', (req, res) => {
+    res.send('Hello I am Devun & this is the User Backend API! ');   
+})
+
 .use('/user', userRoutes);
 
 mongodb.initDb((err) => {

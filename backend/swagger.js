@@ -5,8 +5,8 @@ const doc = {
         title: 'CSE 341 Backend API',
         description: 'Project 1 part 2 User API'
     },
-    host: 'localhost:8080',
-    schemes: ['http, https'],
+    host: 'cse341-node-ujx7.onrender.com',
+    schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
