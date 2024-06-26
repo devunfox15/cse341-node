@@ -1,26 +1,216 @@
 [
     {
-    "_id": "666cde87de5600aacca96bb1",
-    "firstName": "Malone",
-    "lastName": "Carroll",
-    "email": "malone@gmail.com",
-    "favoriteColor": "Black",
-    "birthday": "January 12, 2001"
+        "inventory": {
+            "shirts": [
+                {
+                    "size": [
+                        "x-small",
+                        "small",
+                        "medium",
+                        "large",
+                        "x-large",
+                        "xx-large"
+                    ],
+                    "color": [
+                        "blue",
+                        "white",
+                        "black",
+                        "red",
+                        "green",
+                        "yellow",
+                        "pink",
+                        "purple"
+                    ]
+                }
+            ],
+            "pants": [
+                {
+                    "size": [
+                        "x-small",
+                        "small",
+                        "medium",
+                        "large",
+                        "x-large",
+                        "xx-large"
+                    ],
+                    "color": [
+                        "black",
+                        "blue",
+                        "Khaki"
+                    ]
+                }
+            ],
+            "shoes": [
+                {
+                    "size": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12",
+                        "13",
+                        "14"
+                    ],
+                    "color": [
+                        "blue",
+                        "white",
+                        "black",
+                        "red",
+                        "green",
+                        "yellow",
+                        "pink",
+                        "purple"
+                    ],
+                    "brand": [
+                        "nike",
+                        "adidas",
+                        "reebok",
+                        "jordan",
+                        "converse",
+                        "vans"
+                    ]
+                }
+            ],
+            "jackets": [
+                {
+                    "size": [
+                        "x-small",
+                        "small",
+                        "medium",
+                        "large",
+                        "x-large",
+                        "xx-large"
+                    ],
+                    "color": [
+                        "blue",
+                        "white",
+                        "black",
+                        "red",
+                        "green",
+                        "yellow",
+                        "pink",
+                        "purple"
+                    ],
+                    "brand": [
+                        "nike",
+                        "adidas",
+                        "reebok",
+                        "jordan",
+                        "converse",
+                        "vans"
+                    ]
+                }
+            ],
+            "sweatshirts": [
+                {
+                    "size": [
+                        "x-small",
+                        "small",
+                        "medium",
+                        "large",
+                        "x-large",
+                        "xx-large"
+                    ],
+                    "color": [
+                        "blue",
+                        "white",
+                        "black",
+                        "red",
+                        "green",
+                        "yellow",
+                        "pink",
+                        "purple"
+                    ],
+                    "brand": [
+                        "nike",
+                        "adidas",
+                        "reebok",
+                        "jordan",
+                        "converse",
+                        "vans"
+                    ]
+                }
+            ],
+            "sweatpants": [
+                {
+                    "size": [
+                        "x-small",
+                        "small",
+                        "medium",
+                        "large",
+                        "x-large",
+                        "xx-large"
+                    ],
+                    "color": [
+                        "blue",
+                        "white",
+                        "black",
+                        "red",
+                        "green",
+                        "yellow",
+                        "pink",
+                        "purple"
+                    ],
+                    "brand": [
+                        "nike",
+                        "adidas",
+                        "reebok",
+                        "jordan",
+                        "converse",
+                        "vans"
+                    ]
+                }
+            ],
+            "socks": [
+                {
+                    "size": [
+                        "x-small",
+                        "small",
+                        "medium",
+                        "large",
+                        "x-large"
+                    ],
+                    "color": [
+                        "blue",
+                        "white",
+                        "black",
+                        "red",
+                        "green",
+                        "yellow",
+                        "pink",
+                        "purple"
+                    ],
+                    "brand": [
+                        "nike",
+                        "adidas",
+                        "reebok",
+                        "jordan",
+                        "converse",
+                        "vans"
+                    ]
+                }
+            ]
+        }
     },
     {
-    "_id": "666cdfb2de5600aacca96bb2",
-    "firstName": "Daphnie",
-    "lastName": "Durst",
-    "email": "daphnie@gmail.com",
-    "favoriteColor": "Green",
-    "birthday": "December 2, 1999"
-    },
-    {
-    "_id": "666cdff4de5600aacca96bb3",
-    "firstName": "Devun",
-    "lastName": "Durst",
-    "email": "devun@gmail.com",
-    "favoriteColor": "Blue",
-    "birthday": "July 8, 1999"
+        "store": [
+            {
+                "name": "Tilly Demo Store",
+                "location": "123 Main Street, Anytown, USA",
+                "phone": "555-555-5555"
+            },
+            {
+                "name": "Nike Demo Store",
+                "location": "126 Main Street, Anytown, USA",
+                "phone": "555-777-5555"
+            }
+        ]
     }
 ]
