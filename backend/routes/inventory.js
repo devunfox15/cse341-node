@@ -7,9 +7,9 @@ router.get('/', InvController.getAll);
 
 router.get('/:id', InvController.getSingle);
 
-router.post('/', inventoryValidationRules, validate, InvController.createInv);
+router.post('/', inventoryValidationRules(), validate, InvController.createInv);
 
-router.put('/:id', inventoryValidationRules, validate, InvController.updateInv);
+router.put('/:id', inventoryValidationRules(), validate, InvController.updateInv);
 
 router.delete('/:id', InvController.deleteInv);
 

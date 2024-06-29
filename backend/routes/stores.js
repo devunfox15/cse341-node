@@ -8,9 +8,9 @@ router.get('/', StoreController.getAll);
 
 router.get('/:id', StoreController.getSingle);
 
-router.post('/',retailerValidationRules, validate, StoreController.createStore);
+router.post('/',retailerValidationRules(), validate, StoreController.createStore);
 
-router.put('/:id',retailerValidationRules, validate, StoreController.updateStore);
+router.put('/:id',retailerValidationRules(), validate, StoreController.updateStore);
 
 router.delete('/:id', StoreController.deleteStore);
 

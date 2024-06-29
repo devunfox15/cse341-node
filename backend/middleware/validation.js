@@ -4,12 +4,12 @@ const {body, validationResult } = require('express-validator');
 //"size": "M","brand": "Levi's","color": "Blue","quantity": 11 }
 const inventoryValidationRules = () => {
     return [
-        body('name').isAlpha({ ignore: ' ' }).not().isEmpty(),
-        body('product').isAlpha({ ignore: ' ' }).not().isEmpty(),
-        body('price').isFloat().not().isEmpty(),
-        body('size').isAlpha({ ignore: ' ' }).not().isEmpty(),
-        body('brand').isAlpha({ ignore: ' ' }).not().isEmpty(),
-        body('color').isAlpha({ ignore: ' ' }).not().isEmpty(),
+        body('name').not().isEmpty(),
+        body('product').not().isEmpty(),
+        body('price').not().isEmpty(),
+        body('size').not().isEmpty(),
+        body('brand').not().isEmpty(),
+        body('color').not().isEmpty(),
         body('quantity').isInt()
     ]
 };
@@ -17,10 +17,10 @@ const inventoryValidationRules = () => {
 // "name": "Jane Smith","address": "456 Elm Avenue","city": "Sometown","state": "NY", "zip": "54321","phone": "555-987-6543","email": "jane.smith@example.com"
 const retailerValidationRules = () => {
     return [
-        body('name').isAlpha({ ignore: ' ' }).not().isEmpty(),
-        body('address').isAlpha({ ignore: ' ' }).not().isEmpty(),
-        body('city').isAlpha({ ignore: ' ' }).not().isEmpty(),
-        body('state').isAlpha({ ignore: ' ' }).not().isEmpty(),
+        body('name').not().isEmpty(),
+        body('address').not().isEmpty(),
+        body('city').not().isEmpty(),
+        body('state').not().isEmpty(),
         body('zip').isNumeric().not().isEmpty(),
         body('phone').isNumeric().not().isEmpty(),
         body('email').isEmail().not().isEmpty(),
