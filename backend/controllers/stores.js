@@ -1,30 +1,24 @@
 const mongodb = require('../db/connect');
 const { ObjectId } = require('mongodb');
-
+//working  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 const getAll = async (req, res) => {
-    mongodb
-        .getDb()
-        .db()
-        .collection('stores')
-        .find()
-        .toArray((err, result) => {
-            if (err) {
-                res.status(400).json(err);
-                return;
-            }
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(result);
-        });
+    try {
+        const results = await mongodb.getDb().db().collection('stores').find().toArray();
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(results);
+        }
+    catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 };
-
+//working  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 const getSingle = async (req, res) => {
     try {
         if (!ObjectId.isValid(req.params.id)) {
             throw new Error('Must be a valid Inventory ID to get');
         }
         const userId = new ObjectId(req.params.id);
-        const results = await mongodb.getDb()
-        .db().collection('stores').findOne({ _id: userId });
+        const results = await mongodb.getDb().db().collection('stores').findOne({ _id: userId });
         if (!results) {
             res.status(404).json({ message: 'Store not found' });
             return;
@@ -35,18 +29,18 @@ const getSingle = async (req, res) => {
         res.status(400).json(results.error);
     }
 };
-
+//working  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 const createStore = async (req, res) => {
+    const store = {
+        name: req.body.name,
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
+        phone: req.body.phone,
+        email: req.body.email
+    };
     try {
-        const store = {
-            name: req.body.name,
-            address: req.body.address,
-            city: req.body.city,
-            state: req.body.state,
-            zip: req.body.zip,
-            phone: req.body.phone,
-            email: req.body.email
-        }
         const response = await mongodb
         .getDb()
         .db()
@@ -58,10 +52,10 @@ const createStore = async (req, res) => {
             throw new Error('Failed to create store');
         }
     } catch (err) {
-        res.status(500).json(response.error);
+        res.status(500).json({ message: err.message });
     }
 };
-
+//working  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 const updateStore = async (req, res) => {
     try {
         if (!ObjectId.isValid(req.params.id)) {
@@ -104,7 +98,7 @@ const deleteStore = async (req, res) => {
         .collection('stores')
         .deleteOne({ _id: userId }, true);
         if (response.deletedCount > 0) {
-            res.status(204).json(response);
+            res.status(204).send();
         } else {
             throw new Error('Failed to delete store');
         }
