@@ -1,0 +1,25 @@
+
+[
+    {
+        "store": [
+            {
+                "name": "John Doe",
+                "address": "123 Main Street",
+                "city": "Anytown",
+                "state": "CA",
+                "zip": "12345",
+                "phone": "555-123-4567",
+                "email": "john.doe@example.com"
+            },
+            {
+                "name": "Jane Smith",
+                "address": "456 Elm Avenue",
+                "city": "Sometown",
+                "state": "NY",
+                "zip": "54321",
+                "phone": "555-987-6543",
+                "email": "jane.smith@example.com"
+            }
+        ]
+    }
+]

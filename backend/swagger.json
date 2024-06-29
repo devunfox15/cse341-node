@@ -5,13 +5,23 @@
     "description": "Project 1 part 2 User API",
     "version": "1.0.0"
   },
-  "host": "cse341-node-ujx7.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
-    "/user/": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/inventory/": {
       "get": {
         "description": "",
         "produces": [
@@ -20,6 +30,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -32,19 +45,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "lastName": {
+                "product": {
                   "example": "any"
                 },
-                "email": {
+                "price": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "size": {
                   "example": "any"
                 },
-                "birthday": {
+                "brand": {
+                  "example": "any"
+                },
+                "color": {
+                  "example": "any"
+                },
+                "quantity": {
                   "example": "any"
                 }
               }
@@ -52,8 +71,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -61,7 +80,7 @@
         }
       }
     },
-    "/user/{id}": {
+    "/inventory/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -78,6 +97,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -96,19 +121,179 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "lastName": {
+                "product": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "size": {
+                  "example": "any"
+                },
+                "brand": {
+                  "example": "any"
+                },
+                "color": {
+                  "example": "any"
+                },
+                "quantity": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/stores/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "address": {
+                  "example": "any"
+                },
+                "city": {
+                  "example": "any"
+                },
+                "state": {
+                  "example": "any"
+                },
+                "zip": {
+                  "example": "any"
+                },
+                "phone": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
-                },
-                "favoriteColor": {
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/stores/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
                   "example": "any"
                 },
-                "birthday": {
+                "address": {
+                  "example": "any"
+                },
+                "city": {
+                  "example": "any"
+                },
+                "state": {
+                  "example": "any"
+                },
+                "zip": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "email": {
                   "example": "any"
                 }
               }

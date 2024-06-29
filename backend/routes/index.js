@@ -1,12 +1,10 @@
+const express = require('express');
 const router = require('express').Router();
 
 router.use('/', require('./swagger'));
 
-router.get('/', (req, res) => {
-    //#swagger tags=["Hello World!"]
-    res.send('Hello World!');
-});
+router.use('/inventory', require('./inventory'));
 
-router.use('/user', require('./user'));
+router.use('/stores', require('./stores'));
 
 module.exports = router;
